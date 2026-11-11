@@ -1,0 +1,67 @@
+body {
+    font-family: Noto Sans, sans-serif;
+    background:linear-gradient(to bottom right,#d4e8c0,#bfd7a9);
+}
+
+h1 {
+    color: #333333;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    width:100%;
+    height:100%;
+}
+
+.grid-container > * {
+  grid-column: 1; 
+  grid-row: 1;    
+}
+
+.overlap-layer {
+  margin-top: 20px;
+  margin-left: 20px;
+}
+
+.item-box {
+    width:300px;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-style: solid;
+    border-color: #80b300;
+    border-width: 5px;
+    border-radius: 15px;
+    padding-top:0px;
+    padding-bottom:0px;
+    padding-left:5px;
+    padding-right:5px;
+}
+
+.square {
+    z-index: -1;
+    width: 80px;
+    height: 80px;
+    overflow: hidden;
+    border-style: solid;
+    border-color: white;
+    border-width: 5px;
+    border-radius: 5%;
+    background-color: #c8de6f;
+    animation-name: rotate;
+    animation-delay: 0.2s;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-direction: var(--direction);
+}
+
+@keyframes rotate {
+  0%   {
+    }
+  50%  {
+    transform:rotate(45deg);
+    }
+  100% {
+    transform:rotate(90deg);
+    }
+}
