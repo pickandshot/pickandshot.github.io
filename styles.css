@@ -93,7 +93,7 @@ body {
 
 .link-box {
     list-style-type:none;
-    width:20%;
+    width:260px;
     height:var(--height);
     align-items: center;
     justify-content:center;
