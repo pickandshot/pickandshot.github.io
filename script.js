@@ -1,8 +1,9 @@
+// squares
 const container = document.getElementById("square-list");
 let htmlContent = "";
 let spacing = 120;
-let xoffset = window.innerWidth%spacing / 2;
-let yoffset = window.innerHeight%spacing / 1.5;
+let xoffset = 10 + window.innerWidth%spacing / 2;
+let yoffset = 10 + window.innerHeight%spacing / 2;
 let x = xoffset;
 let y = yoffset;
 let row=1;
@@ -10,7 +11,6 @@ let column=1;
 let dir = 0;
 let round = '0%';
 let n = Math.ceil(window.innerWidth/spacing - 1)*Math.ceil(window.innerHeight/spacing - 1);
-// Generate 5 product cards dynamically
 for (let i = 1; i <= n; i++) {
     round = '0%';
     dir = 'normal';
@@ -45,7 +45,7 @@ for (let i = 1; i <= n; i++) {
   `;
     x += spacing;
     column+=1;
-    if (x >= window.innerWidth - spacing) {
+    if (x >= window.innerWidth + 10 - spacing) {
         x=xoffset;
         y+=spacing;
         column=1;
